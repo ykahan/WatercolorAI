@@ -1,10 +1,7 @@
-from gui import FinancialApp
 import tkinter as tk
+from gui import FinancialApp
 
-def main():
+if __name__ == "__main__":
     root = tk.Tk()
     app = FinancialApp(root)
     root.mainloop()
-
-if __name__ == "__main__":
-    main()
