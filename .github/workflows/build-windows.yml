@@ -40,3 +40,16 @@ jobs:
       with:
         name: WatercolorAI-EXE
         path: dist/*.exe
+        
+    # Step 6: Turn the executable into a GitHub Release
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v0.1.0
+          name: WatercolorAI v0.1.0
+          draft: false
+          prerelease: false
+          files: |
+            dist/*.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
